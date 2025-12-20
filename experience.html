@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manikandan Gunaseelan | Portfolio</title>
-  <meta name="description" content="Portfolio of Manikandan Gunaseelan." />
+  <title>Experience | Manikandan Gunaseelan</title>
+  <meta name="description" content="Professional experience." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -117,110 +117,49 @@
     }
 
     main {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 48px 24px 96px;
       display: flex;
       flex-direction: column;
-      gap: 72px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-card {
-      background: var(--bg-soft);
-      padding: 32px;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.25em;
-      color: var(--muted);
+      gap: 24px;
     }
 
     h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
       line-height: 1.1;
-      margin: 12px 0 16px;
     }
 
-    .hero p {
-      color: var(--muted);
-    }
-
-    .hero-actions {
-      margin-top: 24px;
+    .section-title {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
     }
 
-    .btn {
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 600;
-      background: transparent;
-      transition: background 0.3s ease, transform 0.2s ease;
+    .section-title h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
     }
 
-    .btn.primary {
-      background: var(--accent);
-      color: #1a120e;
-      border-color: transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .portrait {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      min-height: 320px;
-    }
-
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 32px 24px 56px;
+    .section-title span {
       color: var(--muted);
       font-size: 14px;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeUp 0.8s ease forwards;
+    .timeline {
+      display: grid;
+      gap: 16px;
     }
 
-    .fade-in.delay-1 { animation-delay: 0.1s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .timeline-item {
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent-2);
+      background: var(--bg-soft);
+      border-radius: 12px;
     }
 
     @media (max-width: 780px) {
@@ -230,11 +169,6 @@
 
       .nav-links {
         width: 100%;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
   </style>
@@ -257,28 +191,29 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-card fade-in">
-        <div class="eyebrow">Portfolio</div>
-        <h1>Building resilient systems at the intersection of networks and AI.</h1>
-        <p>
-          Software Engineer with deep experience in network telemetry, distributed systems, and ML pipelines.
-          Focused on reliability, automation, and measurable impact across large-scale infrastructure.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="contact.html">Let&apos;s talk</a>
-          <a class="btn" href="work.html">View projects</a>
-        </div>
+    <h1>Experience</h1>
+    <div class="section-title">
+      <h2>Cisco Systems</h2>
+      <span>Industry</span>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Software Engineer II</h3>
+        <p>Oct 2023 - Jun 2025</p>
+        <p>Architected combinatorial interaction testing for networking protocols, cutting test time by 77%.</p>
       </div>
-      <div class="portrait fade-in delay-1">
-        <img src="assets/portrait.png" alt="Portrait of Manikandan" />
+      <div class="timeline-item">
+        <h3>Software Engineer I</h3>
+        <p>Aug 2022 - Sep 2023</p>
+        <p>Built gNOI tooling and led OOD and complexity training for 40+ engineers.</p>
       </div>
-    </section>
+      <div class="timeline-item">
+        <h3>Technical Undergraduate Intern</h3>
+        <p>Jan 2022 - Jun 2022</p>
+        <p>Delivered a Flask + JS dashboard to track 60+ automation packages.</p>
+      </div>
+    </div>
   </main>
-
-  <footer>
-    Built with care. Theme preference is saved locally.
-  </footer>
 
   <script>
     const root = document.documentElement;
