@@ -1,301 +1,306 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manikandan Gunaseelan | Portfolio</title>
-  <meta name="description" content="Portfolio of Manikandan Gunaseelan." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --font-display: "Playfair Display", "Times New Roman", serif;
-      --font-body: "Space Grotesk", "Trebuchet MS", sans-serif;
-      --bg: #f6f2ee;
-      --bg-soft: #ffffff;
-      --text: #1d1a18;
-      --muted: #5a524b;
-      --line: #d4c9bf;
-      --accent: #e96b4c;
-      --accent-2: #1f3c88;
-      --chip: #efe5db;
-      --shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    }
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio for Manikandan Gunaseelan, software engineer and MS Computer Science student at CU Boulder."
+    />
+    <title>Manikandan Gunaseelan | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    [data-theme="dark"] {
-      --bg: #0f1114;
-      --bg-soft: #171a1f;
-      --text: #f3efe9;
-      --muted: #b7aea5;
-      --line: #2d323b;
-      --accent: #ff8c5b;
-      --accent-2: #7fb2ff;
-      --chip: #232832;
-      --shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: radial-gradient(circle at 20% 20%, rgba(255, 159, 125, 0.18), transparent 45%),
-        radial-gradient(circle at 80% 0%, rgba(33, 63, 140, 0.2), transparent 40%),
-        var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: color-mix(in oklab, var(--bg) 92%, transparent);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-family: var(--font-display);
-      font-size: 20px;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 12px;
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      transition: border 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      border-color: var(--line);
-      color: var(--accent-2);
-    }
-
-    .theme-toggle {
-      border: 1px solid var(--line);
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--bg-soft);
-      font-size: 13px;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      transform: translateY(-1px);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 24px 96px;
-      display: flex;
-      flex-direction: column;
-      gap: 72px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-card {
-      background: var(--bg-soft);
-      padding: 32px;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.25em;
-      color: var(--muted);
-    }
-
-    h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4vw, 3.8rem);
-      line-height: 1.1;
-      margin: 12px 0 16px;
-    }
-
-    .hero p {
-      color: var(--muted);
-    }
-
-    .hero-actions {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      font-weight: 600;
-      background: transparent;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #1a120e;
-      border-color: transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .portrait {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      min-height: 320px;
-    }
-
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 32px 24px 56px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeUp 0.8s ease forwards;
-    }
-
-    .fade-in.delay-1 { animation-delay: 0.1s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 780px) {
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav class="nav">
-      <a class="logo" href="index.html">Manikandan Gunaseelan</a>
-      <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="experience.html">Experience</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <button class="theme-toggle" id="themeToggle" type="button">Switch to Dark</button>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="portrait fade-in delay-1">
-        <img src="assets/portrait.png" alt="Portrait of Manikandan" />
-      </div>
-      <div class="hero-card fade-in">
-        <div class="eyebrow">Portfolio</div>
-        <h1>Building resilient systems at the intersection of networks and AI.</h1>
-        <p>
-          Software Engineer with deep experience in network telemetry, distributed systems, and ML pipelines.
-          Focused on reliability, automation, and measurable impact across large-scale infrastructure.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="contact.html">Let&apos;s talk</a>
-          <a class="btn" href="work.html">View projects</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="Manikandan Gunaseelan home">
+          <span>Manikandan</span>
+          <span>Gunaseelan</span>
+        </a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-    </section>
-  </main>
+      </nav>
+    </header>
 
-  <footer>
-    Built with care. Theme preference is saved locally.
-  </footer>
+    <main id="main">
+      <section class="hero section-grid" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker">Software engineer / MS Computer Science candidate</p>
+          <h1 id="hero-title">Building network automation, telemetry systems, and applied ML tools.</h1>
+          <p class="lede">
+            I am Manikandan Gunaseelan, a software engineer with Cisco Systems experience and current graduate
+            study at the University of Colorado Boulder. My work spans Python APIs, distributed telemetry,
+            networking protocols, and data-driven applications.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button" href="assets/Manikandan_Gunaseelan.pdf">Resume PDF</a>
+          </div>
+        </div>
 
-  <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById("themeToggle");
-    const storedTheme = localStorage.getItem("theme");
+        <div class="portrait-panel" aria-label="Portrait of Manikandan on the CU Boulder campus">
+          <img src="assets/portrait.png" alt="Manikandan Gunaseelan standing outside on a snowy CU Boulder campus." />
+          <div class="portrait-caption">
+            <span>Current base</span>
+            <strong>Boulder, Colorado</strong>
+          </div>
+        </div>
+      </section>
 
-    if (storedTheme) {
-      root.setAttribute("data-theme", storedTheme);
-      toggle.textContent = storedTheme === "dark" ? "Switch to Light" : "Switch to Dark";
-    }
+      <section class="signal-strip" aria-label="Portfolio highlights">
+        <div>
+          <span class="metric">3.9/4.0</span>
+          <span>MS CS GPA at CU Boulder</span>
+        </div>
+        <div>
+          <span class="metric">77%</span>
+          <span>test runtime reduction at Cisco</span>
+        </div>
+        <div>
+          <span class="metric">31%</span>
+          <span>increase in pre-release bug detection</span>
+        </div>
+      </section>
 
-    toggle.addEventListener("click", () => {
-      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-      toggle.textContent = next === "dark" ? "Switch to Light" : "Switch to Dark";
-    });
-  </script>
-</body>
+      <section class="content-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <p class="kicker">Experience</p>
+            <h2 id="work-title">Cisco Systems</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Jan 2022 - Jun 2025</span>
+              <strong>Software Engineer II</strong>
+            </div>
+            <div class="timeline-body">
+              <h3>Networking protocol testing and telemetry systems</h3>
+              <ul>
+                <li>Architected and deployed combinatorial interaction testing for networking protocols.</li>
+                <li>Reduced test run times by 77% and increased pre-release bug detection by 31%.</li>
+                <li>
+                  Resolved a gNMI Telemetry synchronization issue for Google, supporting continuity for a $10M+
+                  account.
+                </li>
+                <li>
+                  Built Python-based telemetry APIs for multi-collector operations and Matplotlib monitoring views.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Jan 2022 - Jun 2025</span>
+              <strong>Software Engineer I</strong>
+            </div>
+            <div class="timeline-body">
+              <h3>Automation interfaces and team training</h3>
+              <ul>
+                <li>
+                  Authored and maintained pygnoi, a Pythonic interface for gNOI services used by internal network
+                  automation teams.
+                </li>
+                <li>
+                  Led technical training on object-oriented design and time complexity for a 40+ person team.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span>Internship</span>
+              <strong>Technical Undergraduate Intern</strong>
+            </div>
+            <div class="timeline-body">
+              <h3>Operational dashboard</h3>
+              <p>
+                Developed a Flask and JavaScript dashboard to centralize tracking and operational metrics for 60+
+                automation packages.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div>
+            <p class="kicker">Selected projects</p>
+            <h2 id="projects-title">Systems with moving parts</h2>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <details class="project-entry" open>
+            <summary>
+              <span class="project-index">A</span>
+              <span>
+                <strong>TempoMind</strong>
+                <small>Garmin-Spotify Heart-Rate Orchestrator / CU Boulder / Fall 2025</small>
+              </span>
+            </summary>
+            <div class="project-detail">
+              <p>
+                Real-time ingestion pipeline that synchronizes Garmin BLE heart-rate telemetry with Spotify Web
+                Playback for dynamic BPM-to-song matching.
+              </p>
+              <dl>
+                <div>
+                  <dt>Contribution</dt>
+                  <dd>
+                    Designed a multi-container environment with Redis, MinIO, SQLite, Docker Compose, and Socket.IO
+                    for sub-second state synchronization across ingestion, playback, and feedback UIs.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Storage</dt>
+                  <dd>
+                    Used Redis for transient streams and MinIO/SQLite for persistent telemetry mirroring and
+                    session-history deduplication.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="project-entry">
+            <summary>
+              <span class="project-index">B</span>
+              <span>
+                <strong>SemEval-2026 Polarization Detection</strong>
+                <small>Counterfactual reasoning / SemEval / Fall 2025</small>
+              </span>
+            </summary>
+            <div class="project-detail">
+              <p>
+                Transformer-based classification work for English polarized discourse across binary and
+                manifestation-level categories using social media data.
+              </p>
+              <dl>
+                <div>
+                  <dt>Models</dt>
+                  <dd>Developed DeBERTa-v3 and RoBERTa experiments with Hugging Face and PyTorch.</dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>
+                    Implemented Counterfactual Data Augmentation to evaluate robustness, label imbalance, contextual
+                    noise, and linguistic bias in automated moderation systems.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="project-entry">
+            <summary>
+              <span class="project-index">C</span>
+              <span>
+                <strong>AWS GameDay Hackathon</strong>
+                <small>Amazon at CU Boulder / Top 5 finish / Sep 2025</small>
+              </span>
+            </summary>
+            <div class="project-detail">
+              <p>
+                Prototyped a GenAI healthcare application using Amazon Bedrock for RAG-based search and AWS
+                Transcribe for speech analytics of patient-provider interactions.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="content-section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div>
+            <p class="kicker">Stack</p>
+            <h2 id="skills-title">Tools I have used in shipped work and graduate projects</h2>
+          </div>
+        </div>
+
+        <div class="skill-matrix">
+          <article>
+            <h3>Languages</h3>
+            <p>Python, Java, C/C++, JavaScript, SQL, Bash, HTML/CSS</p>
+          </article>
+          <article>
+            <h3>Libraries & frameworks</h3>
+            <p>PyTorch, TensorFlow, Spark Streaming, Flask, Matplotlib, pytest</p>
+          </article>
+          <article>
+            <h3>Cloud & data</h3>
+            <p>GCP, Apache Spark, Hadoop, GKE, AWS Bedrock, AWS Transcribe</p>
+          </article>
+          <article>
+            <h3>Messaging & storage</h3>
+            <p>Redis, MinIO, PostgreSQL, SQLite</p>
+          </article>
+          <article>
+            <h3>DevOps & tools</h3>
+            <p>Docker, Kubernetes, Git, Postman, Linux</p>
+          </article>
+          <article>
+            <h3>Networking</h3>
+            <p>Cisco IOS-XR, gRPC, NETCONF, gNMI, Cisco Telemetry</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section education-section" aria-labelledby="education-title">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div>
+            <p class="kicker">Education</p>
+            <h2 id="education-title">Computer science and engineering foundation</h2>
+          </div>
+        </div>
+
+        <div class="education-list">
+          <article>
+            <span>Aug 2025 - May 2027</span>
+            <h3>University of Colorado Boulder</h3>
+            <p>MS in Computer Science / GPA 3.9/4.0</p>
+          </article>
+          <article>
+            <span>Aug 2018 - Jul 2022</span>
+            <h3>BITS Pilani, K K Birla Goa Campus</h3>
+            <p>BE in Electronics and Communication Engineering / GPA 8.05/10</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Open to software engineering work around backend systems, data, and ML tooling.</h2>
+        </div>
+        <ul class="contact-list">
+          <li><a href="mailto:Manikandan.Gunaseelan@colorado.edu">Manikandan.Gunaseelan@colorado.edu</a></li>
+          <li><a href="https://www.linkedin.com/in/manikandan-gunaseelan/">LinkedIn</a></li>
+          <li><a href="https://github.com/manig1729">GitHub</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Manikandan Gunaseelan</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
