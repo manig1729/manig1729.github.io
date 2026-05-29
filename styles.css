@@ -553,6 +553,11 @@ h3 {
   padding-bottom: 3.5rem;
 }
 
+.contact-panel {
+  display: grid;
+  gap: 1rem;
+}
+
 .contact-list {
   display: grid;
   gap: 0.75rem;
