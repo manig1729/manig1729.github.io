@@ -342,28 +342,6 @@ h3 {
   font-size: 0.95rem;
 }
 
-.signal-strip {
-  display: grid;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--line);
-}
-
-.signal-strip div {
-  display: grid;
-  gap: 0.25rem;
-  background: rgba(25, 22, 19, 0.94);
-  padding: 1rem;
-  color: var(--muted);
-}
-
-.metric {
-  color: var(--text);
-  font-family: var(--mono);
-  font-size: 1.45rem;
-}
-
 .content-section,
 .contact-section {
   padding: 5rem 0;
@@ -390,14 +368,17 @@ h3 {
 
 .timeline {
   display: grid;
-  border-top: 1px solid var(--line);
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
 }
 
 .timeline-item {
   display: grid;
   gap: 1rem;
-  border-bottom: 1px solid var(--line);
-  padding: 1.4rem 0;
+  background: rgba(25, 22, 19, 0.97);
+  padding: 1.2rem;
 }
 
 .timeline-meta {
@@ -431,19 +412,21 @@ h3 {
 
 .project-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
 }
 
 .project-entry {
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  border: 0;
+  background: rgba(25, 22, 19, 0.97);
   transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
 }
 
 .project-entry:hover,
 .project-entry[open] {
-  border-color: var(--line-strong);
-  background: rgba(214, 160, 87, 0.045);
+  background: #211c17;
 }
 
 .project-entry:hover {
@@ -618,7 +601,6 @@ h3 {
 }
 
 @media (min-width: 720px) {
-  .signal-strip,
   .skill-matrix,
   .education-list {
     grid-template-columns: repeat(2, 1fr);
@@ -669,17 +651,13 @@ h3 {
     min-height: 0;
   }
 
-  .signal-strip {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .skill-matrix {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .timeline-item {
     grid-template-columns: minmax(190px, 0.27fr) minmax(0, 0.73fr);
-    padding: 1.75rem 0;
+    padding: 1.75rem;
   }
 
   .education-list {

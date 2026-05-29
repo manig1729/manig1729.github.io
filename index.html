@@ -53,21 +53,6 @@
         </div>
       </section>
 
-      <section class="signal-strip" aria-label="Portfolio highlights">
-        <div>
-          <span class="metric">3.9/4.0</span>
-          <span>MS CS GPA at CU Boulder</span>
-        </div>
-        <div>
-          <span class="metric">77%</span>
-          <span>test runtime reduction at Cisco</span>
-        </div>
-        <div>
-          <span class="metric">31%</span>
-          <span>increase in pre-release bug detection</span>
-        </div>
-      </section>
-
       <section class="content-section" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <span class="section-number">01</span>
@@ -209,6 +194,76 @@
             <summary>
               <span class="project-index">C</span>
               <span>
+                <strong>Multi-Agent System for Automated Architecture Inference</strong>
+                <small>CU Boulder / Spring 2026</small>
+              </span>
+            </summary>
+            <div class="project-detail">
+              <p>
+                Multi-agent LLM pipeline that generates evidence-backed Mermaid architecture diagrams from local
+                codebases.
+              </p>
+              <dl>
+                <div>
+                  <dt>Agents</dt>
+                  <dd>
+                    Built four specialized agents: File Summarizer, Context Manager, Architect, and Critic.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Accuracy loop</dt>
+                  <dd>
+                    Designed a falsification-first critic loop that challenges weak claims, rejects unsupported
+                    diagram edges, and hardens outputs across configurable revision rounds.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Output</dt>
+                  <dd>
+                    Supports 35+ language file types and produces architecture JSON, Mermaid flowcharts, critic
+                    reports, and run stats with a single OpenAI API dependency.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="project-entry">
+            <summary>
+              <span class="project-index">D</span>
+              <span>
+                <strong>Predictive Tiered Storage</strong>
+                <small>Elastic disaggregated data warehouses / CU Boulder / Spring 2026</small>
+              </span>
+            </summary>
+            <div class="project-detail">
+              <p>
+                Trace-driven prototype for an elastic disaggregated data warehouse with compute workers, local SSD
+                caches, an object-store backend, and a metadata directory service.
+              </p>
+              <dl>
+                <div>
+                  <dt>Policy engine</dt>
+                  <dd>
+                    Designed an ML-guided policy engine to optimize p95/p99 read latencies by predictively placing
+                    and evicting data segments across SSD and object-store tiers.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Evaluation</dt>
+                  <dd>
+                    Built a telemetry pipeline and feature-ablation study covering access-based, cost/size, and
+                    semantic features during simulated scale-out and scale-in events.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="project-entry">
+            <summary>
+              <span class="project-index">E</span>
+              <span>
                 <strong>AWS GameDay Hackathon</strong>
                 <small>Amazon at CU Boulder / Top 5 finish / Sep 2025</small>
               </span>
@@ -218,6 +273,15 @@
                 Prototyped a GenAI healthcare application using Amazon Bedrock for RAG-based search and AWS
                 Transcribe for speech analytics of patient-provider interactions.
               </p>
+              <dl>
+                <div>
+                  <dt>Cloud flow</dt>
+                  <dd>
+                    Implemented serverless, event-driven pipelines with AWS Lambda, Step Functions, IAM, S3, and
+                    Guardrails for schema-consistent GenAI outputs and scalable cloud operations.
+                  </dd>
+                </div>
+              </dl>
             </div>
           </details>
         </div>
